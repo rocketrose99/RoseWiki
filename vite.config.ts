@@ -6,5 +6,6 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 10000,
+    allowedHosts: ["localhost", "rosewiki.onrender.com", "0.0.0.0"]
   },
 })

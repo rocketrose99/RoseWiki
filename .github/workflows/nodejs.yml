@@ -14,9 +14,8 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: 25.x
-    - run: |
-        npm install
-        npm run build
+    - run: npm install
+    - run: npm run build
       
   lint:
     runs-on: ubuntu-latest
@@ -25,9 +24,8 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: 25.x
-    - run: |
-        npm install
-        npm run lint
+    - run: npm install
+    - run: npm run lint
       
   test:
     runs-on: ubuntu-latest
@@ -36,6 +34,5 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: 25.x
-    - run: |
-        npm install
-        npm run test
+    - run: npm install
+    - run: npm run test

@@ -1,5 +1,5 @@
-import { ActionIcon, Group } from '@mantine/core';
 import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
+import { ActionIcon, Group } from '@mantine/core';
 import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle';
 
 export function Icons() {
@@ -10,8 +10,8 @@ export function Icons() {
         href="https://github.com/rocketrose99?tab=repositories"
         size="md"
         aria-label="Open in a new tab"
-        variant='light'
-        >
+        variant="light"
+      >
         <IconBrandGithub />
       </ActionIcon>
       <ActionIcon
@@ -19,8 +19,8 @@ export function Icons() {
         href="https://www.linkedin.com/in/s-rose-lindauer/"
         size="md"
         aria-label="Open in a new tab"
-        variant='light'
-        >
+        variant="light"
+      >
         <IconBrandLinkedin />
       </ActionIcon>
       <ColorSchemeToggle />

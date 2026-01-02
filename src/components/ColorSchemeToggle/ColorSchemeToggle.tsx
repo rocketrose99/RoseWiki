@@ -1,12 +1,12 @@
-import { ActionIcon, useMantineColorScheme } from '@mantine/core';
 import { useEffect, useState } from 'react';
-import { IconSun, IconMoonStars } from '@tabler/icons-react';
+import { IconMoonStars, IconSun } from '@tabler/icons-react';
+import { ActionIcon, useMantineColorScheme } from '@mantine/core';
 
 export function ColorSchemeToggle() {
   const { setColorScheme } = useMantineColorScheme();
   const [dark, setDark] = useState(true);
 
-  setColorScheme('dark')
+  setColorScheme('dark');
 
   useEffect(() => {
     if (dark) {
@@ -17,17 +17,12 @@ export function ColorSchemeToggle() {
   }, [dark, setColorScheme]);
 
   return (
-    <ActionIcon
-      onClick={() => setDark(!dark)}
-      size="md"
-      variant='light'
-    >
-      {
-        dark ?
-          <IconSun size={16} stroke={2.5} color="var(--mantine-color-yellow-6)" /> :
-          <IconMoonStars size={16} stroke={2.5} color="var(--mantine-color-blue-6)" />
-          
-      }
+    <ActionIcon onClick={() => setDark(!dark)} size="md" variant="light">
+      {dark ? (
+        <IconSun size={16} stroke={2.5} color="var(--mantine-color-yellow-6)" />
+      ) : (
+        <IconMoonStars size={16} stroke={2.5} color="var(--mantine-color-blue-6)" />
+      )}
     </ActionIcon>
   );
 }

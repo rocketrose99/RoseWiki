@@ -1,6 +1,6 @@
 /// <reference types="vitest/config" />
-import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
@@ -12,6 +12,6 @@ export default defineConfig({
   },
   server: {
     port: 10000,
-    allowedHosts: ["localhost", "rosewiki.onrender.com", "0.0.0.0"]
+    allowedHosts: ['localhost', 'rosewiki.onrender.com', '0.0.0.0'],
   },
 });

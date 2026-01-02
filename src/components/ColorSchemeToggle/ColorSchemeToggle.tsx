@@ -21,7 +21,7 @@ export function ColorSchemeToggle() {
       {dark ? (
         <IconSun size={16} stroke={2.5} color="var(--mantine-color-yellow-6)" />
       ) : (
-        <IconMoonStars size={16} stroke={2.5} color="var(--mantine-color-blue-6)" />
+        <IconMoonStars size={16} stroke={2.5} color="var(--mantine-color-violet-6)" />
       )}
     </ActionIcon>
   );

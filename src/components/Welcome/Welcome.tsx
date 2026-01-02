@@ -1,23 +1,30 @@
-import { Anchor, Text, Title } from '@mantine/core';
+import { Button, Text, Title } from '@mantine/core';
 import classes from './Welcome.module.css';
+import { IconDownload } from '@tabler/icons-react';
 
 export function Welcome() {
   return (
     <>
-      <Title className={classes.title} ta="center" mt={100}>
-        Welcome to{' '}
-        <Text inherit variant="gradient" component="span" gradient={{ from: 'pink', to: 'yellow' }}>
-          Mantine
+      <Text mt={100} ml={150}>
+        Hello World, I'm
+      </Text>
+      <Title className={classes.title} ml={150}>
+        <Text inherit component="span" c="deep-red">
+          S. Rose Lindauer
         </Text>
       </Title>
-      <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
-        This starter Vite project includes a minimal setup, if you want to learn more on Mantine +
-        Vite integration follow{' '}
-        <Anchor href="https://mantine.dev/guides/vite/" size="lg">
-          this guide
-        </Anchor>
-        . To get started edit pages/Home.page.tsx file.
+      <Text c="dimmed" size="lg" ml={150} maw={580} mx="auto">
+        I'm a full stack SW engineer who deploys AIML apps, implements MLOps workflows, 
+        and loves Open Source principles
       </Text>
+      <Button 
+        component="a"
+        href="/resume.pdf"
+        download="Lindauer_S_Rose_resume.pdf"
+        leftSection={<IconDownload size={14} />}
+        variant="outline" ml={150} mt={'lg'}>
+        Download my resume!
+      </Button>
     </>
   );
 }

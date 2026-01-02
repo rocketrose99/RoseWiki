@@ -2,7 +2,6 @@ import { AppShell, Group } from '@mantine/core';
 import { Icons } from '../components/Icons/Icons';
 import { Nav } from '../components/Nav/Nav';
 import { Welcome } from '../components/Welcome/Welcome';
-import logo from '../rose.svg';
 
 export function HomePage() {
   return (
@@ -10,7 +9,7 @@ export function HomePage() {
       <AppShell.Header>
         <Group justify="space-between" p="sm">
           <Group align="flex-end">
-            <img src={logo} alt="My Logo" style={{ width: '30px' }} />
+            <img src={'/rose.svg'} alt="My Logo" style={{ width: '30px' }} />
             <Nav />
           </Group>
           <Icons />

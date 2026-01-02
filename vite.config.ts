@@ -1,11 +1,17 @@
+/// <reference types="vitest/config" />
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import react from '@vitejs/plugin-react';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), tsconfigPaths()],
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './vitest.setup.mjs',
+  },
   server: {
     port: 10000,
     allowedHosts: ["localhost", "rosewiki.onrender.com", "0.0.0.0"]
   },
-})
+});

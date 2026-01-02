@@ -1,23 +1,13 @@
-import { useState } from 'react'
-import roseLogo from '/rose.svg'
-import './App.css'
+import '@mantine/core/styles.css';
 
-function App() {
-  const [count, setCount] = useState(0)
+import { MantineProvider } from '@mantine/core';
+import { Router } from './Router';
+import { theme } from './theme';
 
+export default function App() {
   return (
-    <>
-      <div>
-        <img src={roseLogo} className="logo" alt="Rose logo" />
-      </div>
-      <h1>About Rose Lindauer</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-    </>
-  )
+    <MantineProvider theme={theme}>
+      <Router />
+    </MantineProvider>
+  );
 }
-
-export default App
